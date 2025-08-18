@@ -1,0 +1,23 @@
+#myCanvas{
+
+    border: 1px solid black;
+}
+
+#myRec{
+
+    border: 1px solid black;
+}
+
+#myCir{
+
+    border: 1px solid black;
+}
+
+#myText{
+
+    border: 1px solid black;
+}
+
+/*
+    just to identify the canvas with a border
+*/

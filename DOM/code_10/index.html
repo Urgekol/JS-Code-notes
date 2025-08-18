@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body {
+                background-color: #212121;
+                color: #fff;
+            }
+
+            a {
+                text-decoration: none;
+                color: #4fc3f7;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="links">
+            <a href="https://example.com" target="_blank">Example Link</a><br>
+            <a href="https://www.argha.com" target="_self">Argha Link</a><br>
+            <a href="https://holy.com">Holy Link</a><br>
+        </div>
+
+        <div>
+            <p id="output">
+
+            </p>
+        </div>
+
+        <script>
+            /*
+                Purpose:
+                    Selects all <a> elements with target="_blank", loops through them,
+                    and prints their text content with line breaks.
+            */
+
+            const nodeList = document.querySelectorAll(`a[target="_blank"]`);
+            const links = Array.from(nodeList);
+
+            const output = document.getElementById("output");
+
+            let result = "";
+
+            links.forEach(i => {
+                let value = i.innerText;
+                result += `${value} <br>`;
+            });
+
+            output.innerHTML = result;
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body{
+                background-color: #212121;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+
+        <p id="log">Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+
+        <div>
+            <p id="output">
+
+            </p>
+        </div>
+
+        <script>
+            /*
+                Purpose:
+                Returns a live HTMLCollection of elements with the given tag name.
+            */
+
+            const paragraphs = document.getElementsByTagName("p");
+            const paraLength = paragraphs.length;
+
+            const output = document.getElementById("output");
+            output.innerHTML = `${paraLength}`;
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p class="log">Paragraph 1</p>
+    <p class="log">Paragraph 2</p>
+    <p class="log">Paragraph 3</p>
+    <p class="log">Paragraph 4</p>
+
+    <div>
+      <p id="output"></p>
+    </div>
+
+    <script>
+      const paraArray = [...document.querySelectorAll(".log")];
+
+      const output = document.getElementById("output");
+
+      let result = "";
+      paraArray.forEach(i => {
+        let value = i.innerText;
+        result += `${value} <br>`;
+      });
+      output.innerHTML = result;
+    </script>
+
+  </body>
+</html>

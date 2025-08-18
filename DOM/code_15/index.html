@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parent</title>
+        <style>
+            body {
+                background-color: #212121;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="parent">
+            <p>I hate my life</p>
+        </div>
+
+        <div>
+            <p id="output">
+
+            </p>
+        </div>
+
+        <script>
+
+            const newDiv = document.createElement('div');
+            newDiv.textContent = 'New Div';
+
+            const parentDiv = document.querySelector(".parent");
+            parentDiv.append(newDiv);
+            newDiv.id = 'uniqueDiv';
+            newDiv.className = 'myDivClass';
+
+            output.innerHTML = newDiv.getAttribute("class");
+
+        </script>
+
+    </body>
+</html>

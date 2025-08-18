@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parent</title>
+        <style>
+            body {
+                background-color: #212121;
+                color: #fff;
+                font-family: Arial, sans-serif;
+            }
+
+            li {
+                padding: 8px;
+                margin: 4px 0;
+            }
+        </style>
+    </head>
+    <body>
+
+       <div class="parent">
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+       </div>
+
+       <div>
+           <p id="output"></p>
+       </div>
+
+        <script>
+
+            const parent = document.querySelector('.parent');
+            // parent - HTMLDivElement
+
+            const children = parent.children;
+            // children - HTMLCollection
+
+            let myChildList = Array.from(children);
+            let result = "";
+            myChildList .forEach(i => {
+                result += i.textContent + "<br>";
+            });
+
+            const output = document.getElementById("output");
+
+            output.innerHTML = result;
+
+        </script>
+
+    </body>
+</html>

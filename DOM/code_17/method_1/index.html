@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parent</title>
+        <style>
+            body {
+                background-color: #212121;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+
+        <ul class="languageList">
+
+        </ul>
+
+        <div>
+            <p id="output">
+
+            </p>
+        </div>
+
+        <script>
+
+            function addLanguage(langName)
+            {
+                const li = document.createElement("li");
+                li.innerHTML = `${langName}`;
+                document.querySelector('.languageList').append(li);
+            }
+
+            addLanguage("java")
+            addLanguage("js")
+
+        </script>
+
+    </body>
+</html>

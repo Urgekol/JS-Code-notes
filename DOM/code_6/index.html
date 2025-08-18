@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body {
+                background-color: #212121;
+                color: #fff;
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+
+        <p class="log">Paragraph 1</p>
+        <p class="log">Paragraph 2</p>
+        <p class="log">Paragraph 3</p>
+        <p class="log">Paragraph 4</p>
+
+        <div>
+            <p id="output">
+
+            </p>
+        </div>
+
+        <script>
+            /*
+                Purpose:
+                Selects all <p> elements with class "log", loops through them,
+                and prints their text content with index.
+            */
+
+            const nodeList = document.querySelectorAll(".log");  // NodeList of matching elements
+            const paragraphs = Array.from(nodeList);             // Convert to array if needed
+
+            const output = document.getElementById("output");
+
+            let result = "";
+            for (let i = 0; i < paragraphs.length; i++)
+            {
+                let content = paragraphs[i].textContent;
+                result += `${i + 1}: ${content}<br>`;
+            }
+            output.innerHTML = result;
+
+        </script>
+
+    </body>
+</html>

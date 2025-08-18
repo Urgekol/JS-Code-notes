@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parent</title>
+        <style>
+            body {
+                background-color: #212121;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="parent">
+            <p>I hate my life</p>
+        </div>
+
+        <div>
+            <p id="output">
+
+            </p>
+        </div>
+
+        <script>
+
+            const newDiv = document.createElement('div');
+            const textNode = document.createTextNode('Hello World');
+            newDiv.appendChild(textNode);
+
+            // Append the new div to the body, or any other target
+            const parentDiv = document.querySelector(".parent");
+            parentDiv.appendChild(newDiv);
+
+        </script>
+
+    </body>
+</html>

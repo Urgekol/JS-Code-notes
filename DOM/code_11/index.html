@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Green List</title>
+        <style>
+            body {
+                background-color: #212121;
+                color: #fff;
+                font-family: Arial, sans-serif;
+            }
+
+            li {
+                padding: 8px;
+                margin: 4px 0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+        <script>
+            /*
+                Purpose:
+                    Select the first <li> element inside the <ul>
+                    and apply green background color to each.
+            */
+
+            const myUL = document.querySelector('ul');
+            // Returns HTMLCollection
+
+            const items = myUL.querySelector('li');
+
+            items.style.color = "green";
+
+        </script>
+
+    </body>
+</html>
